@@ -1,0 +1,156 @@
+# Title, decription, tagline and URL for your site
+# Can be used in your theme by calling 'site.title' and so on
+title: Jim Hopper, Ph.D.
+description: Clinical psychologist and independent consultant, Teaching Associate in Psychology, Harvard Medical School, and nationally recognized expert on psychological trauma.
+url: www.jimhopper.com
+
+# Used so Jekyll outputs the site correctly so Gulp can do what it wants
+source: src
+destination: dist
+exclude:
+
+collections:
+  child-abuse:
+    output: true
+    permalink: /child-abuse/:title/
+  consequences-of-abuse:
+    output: true
+    permalink: /child-abuse/consequences-of-abuse/:title/
+  recovered-memories:
+    output: true
+    permalink: /child-abuse/recovered-memories/:title/
+  sexual-abuse-of-boys:
+    output: true
+    permalink: /child-abuse/sexual-abuse-of-boys/:title/
+  healing-resources:
+    output: true
+    permalink: /healing-resources/:title/
+  mindfulness-and-meditation:
+    output: true
+    permalink: mindfulness-and-meditation/:title/
+  brain-healing-and-happiness:
+    output: true
+    permalink: /brain-healing-and-happiness/:title/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: child-abuse
+    values:
+      topic: child-abuse
+      topic_name: Child Abuse
+      layout: topic
+      class: topic child-abuse
+  -
+    scope:
+      path: ""
+      type: brain-healing-and-happiness
+    values:
+      topic: brain-healing-and-happiness
+      topic_name: Brain, Healing & Happiness
+      layout: topic
+      class: topic brain-healing-and-happiness
+  -
+    scope:
+      path: ""
+      type: mindfulness-and-meditation
+    values:
+      topic: mindfulness-and-meditation
+      topic_name: Mindfulness & Meditation
+      layout: topic
+      class: topic mindfulness-and-meditation
+  -
+    scope:
+      path: ""
+      type: sexual-abuse-of-boys
+    values:
+      topic: child-abuse
+      topic_name: Child Abuse
+      subtopic: Sexual Abuse of Boys
+      layout: topic
+      class: topic child-abuse
+  -
+    scope:
+      path: ""
+      type: recovered-memories
+    values:
+      topic: child-abuse
+      topic_name: Child Abuse
+      subtopic: Recovered Memories
+      layout: topic
+      class: topic child-abuse
+  -
+    scope:
+      path: ""
+      type: healing-resources
+    values:
+      topic: healing-resources
+      topic_name: Healing Resources
+      layout: topic
+      class: topic healing-resources
+  -
+    scope:
+      path: ""
+      type: consequences-of-abuse
+    values:
+      topic: child-abuse
+      topic_name: Child Abuse
+      subtopic: Consequences of Abuse
+      layout: topic
+      class: topic child-abuse
+  -
+    scope:
+      path: "about.html"
+    values:
+      layout: default
+  -
+    scope:
+      path: "publications.html"
+    values:
+      layout: default
+  -
+    scope:
+      path: "services.html"
+    values:
+      layout: default
+  -
+    scope:
+      path: "sexual-assault-and-the-brain.html"
+    values:
+      layout: topic
+      permalink: /sexual-assault-and-the-brain/
+      class: topic sexual-assault-and-the-brain
+  -
+    scope:
+      path: "kripalu.html"
+    values:
+      layout: topic
+      permalink: /services/kripalu/
+      class: topic mindfulness-and-meditation
+  -
+    scope:
+      path: "repeat-rape-by-college-men.md"
+    values:
+      layout: topic
+      permalink: /sexual-assault-and-the-brain/repeat-rape-by-college-men/
+      class: topic sexual-assault-and-the-brain
+  -
+    scope:
+      path: "cms.md"
+    values:
+      layout: "cms"
+      permalink: "/cms/"
+      _hide_content: true
+
+
+# Markdown library and options
+
+# kramdown required to turn headings into anchors
+markdown: kramdown
+
+# Extending Jekyll
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from

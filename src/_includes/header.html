@@ -1,0 +1,59 @@
+<header id="main-menu" class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <div class="brand">
+      <a href="/" class="logo"><img src="/assets/images/logo.png" alt=""></a>
+    </div>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        <li class="nav-link more"><a href="javascript:void(0)">Topics</a>
+          <ul class="submenu">
+            <li><a href="/child-abuse/overview">Child Abuse</a></li>
+            <li><a href="/sexual-assault-and-the-brain/">Sexual Assault &amp; The Brain </a></li>
+            <li><a href="/brain-healing-and-happiness/overview">Brain, Healing &amp; Happiness</a></li>
+            <li><a href="/mindfulness-and-meditation/overview">Mindfulness &amp; Meditation</a></li>
+            <li><a href="/healing-resources/overview">Healing Resources</a></li>
+
+          </ul>
+        </li>
+        <li class="nav-link"><a href="/services">Services</a></li>
+        <li class="nav-link"><a href="/publications">Publications</a></li>
+        <li class="nav-link"><a href="/about">About</a></li>
+      </ul>
+    </nav>
+
+  </div>
+</header>
+<style>
+ body.topic.publications .hero, body.topic.services .hero , body.topic.about .hero {
+  
+     padding-bottom: 30px;
+    padding-top: 70px;
+    
+}
+.sticky_nav1 {
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky_nav1 {
+  padding-top: 0px;
+
+}
+</style>
+<script>
+window.onscroll = function() {menu_sticky()};
+
+var mainmenu= document.getElementById("main-menu");
+
+var sticky = mainmenu.offsetTop;
+
+function menu_sticky() {
+  if (window.pageYOffset >= sticky) {
+    mainmenu.classList.add("sticky_nav1")
+  } else {
+    mainmenu.classList.remove("sticky_nav1");
+  }
+}</script>
